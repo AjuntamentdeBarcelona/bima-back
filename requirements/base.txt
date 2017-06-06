@@ -1,0 +1,11 @@
+Django==1.10.7
+django-appconf==1.0.2
+django-compressor==2.1
+django-extensions==1.7.4
+django-kaio==0.6.0
+django-redis==4.4.4
+django-robots==2.0
+psycopg2==2.6.2
+redis==2.10.5
+
+git+https://github.com/AjuntamentdeBarcelona/django-bima-back.git@master

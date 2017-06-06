@@ -1,0 +1,69 @@
+[Paths]
+APP_ROOT                  = home/user/projects/bima-back/src
+STATIC_ROOT               = /tmp/bima-back-static
+MEDIA_ROOT                = /change/me/bima-back
+
+[Logs]
+SENTRY_ENABLED            = False
+SENTRY_DSN                =
+LOG_LEVEL                 = DEBUG
+DJANGO_LOG_LEVEL          = INFO
+; EXTRA_LOGGING           = boto3:INFO,botocore:INFO
+; LOG_FILE                = /var/log/bima-back
+
+[Database]
+DATABASE_USER           = change_me
+DATABASE_HOST           = change_me
+DATABASE_ENGINE         = postgresql
+DATABASE_NAME           = bima_backdb
+DATABASE_PORT           =
+DATABASE_PASSWORD       = change_me
+DATABASE_CONN_MAX_AGE   = 30
+
+TEST_DATABASE_USER      = test_user
+TEST_DATABASE_ENGINE    = postgresql
+TEST_DATABASE_HOST      = change_me
+TEST_DATABASE_NAME      = bima-back_test_db
+TEST_DATABASE_PORT      =
+TEST_DATABASE_PASSWORD  = change_me
+
+[Base]
+APP_SLUG                  = bima-back
+
+[Security]
+SECRET_KEY                = secret_key
+ALLOWED_HOSTS             = *
+
+[Debug]
+DEBUG                     = True
+TEMPLATE_DEBUG            = True
+ENABLE_DEBUG_TOOLBAR      = True
+
+[Compress]
+COMPRESS_ENABLED          = True
+COMPRESS_OFFLINE          = False
+COMPRESS_LESSC_PATH       = ../node_modules/.bin/lessc
+COMPRESS_BABEL_PATH       = ../node_modules/.bin/babel
+
+[WhiteNoise]
+ENABLE_WHITENOISE = False
+
+[Cache]
+CACHE_TYPE              = redis
+REDIS_HOST              = localhost
+CACHE_REDIS_DB          = 0
+REDIS_PORT              = 6379
+CACHE_MAX_ENTRIES       = 10000
+CACHE_TIMEOUT           = 3600
+CACHE_PREFIX            = bima-back
+
+[Constants]
+WS_BASE_URL             = http://127.0.0.1:8000/
+GOOGLE_MAPS_API_KEY     = change_me
+FLICKR_ENABLED          = False
+PHOTO_TYPES_ENABLED     = True
+
+[RequiredFields]
+PHOTO_AUTHOR_REQUIRED       = False
+PHOTO_COPYRIGHT_REQUIRED    = False
+PHOTO_DATE_REQUIRED         = False
